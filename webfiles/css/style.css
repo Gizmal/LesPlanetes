@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+header {
+  background-color: #1B2430;
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "Montserrat";
+}
+header nav {
+  padding: 25px 0;
+  display: flex;
+  margin: auto;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav img {
+  width: 70px;
+  height: 48px;
+}
+header nav ul {
+  max-width: 1200px;
+  display: flex;
+}
+header nav ul li {
+  list-style: none;
+  padding: 0 15px;
+}
+header nav ul li a {
+  padding: 5px 3px;
+  color: white;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  border-bottom: solid 2px #D9D9D9;
+}
+header img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+main article {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  margin-top: 61px;
+}
+main article:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+main article:nth-of-type(2n) img {
+  margin-left: 160px;
+}
+main article:nth-of-type(2n+1) {
+  flex-direction: row;
+}
+main article:nth-of-type(2n+1) img {
+  margin-right: 160px;
+}
+main article img {
+  width: 300px;
+  height: 284px;
+  grid-area: dessin;
+}
+main article .section h2 {
+  grid-area: planete;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 1rem;
+}
+main article .section .composition {
+  display: flex;
+  margin-bottom: 1rem;
+}
+main article .section .composition p.genre {
+  box-shadow: 0 5px 5px gray;
+  font-family: "Roboto";
+  font-weight: 500;
+  width: fit-content;
+  padding: 12px 16px;
+  border-radius: 8px;
+  grid-area: genre;
+  margin-right: 2rem;
+}
+main article .section .composition p.tellurique {
+  background-color: #d6d5a8;
+}
+main article .section .composition p.gazeuse {
+  background-color: #816797;
+}
+main article .section .composition p.date {
+  box-shadow: 0 5px 5px gray;
+  font-family: "Roboto";
+  color: white;
+  width: fit-content;
+  padding: 12px 16px;
+  background-color: #1B2430;
+  border-radius: 8px;
+  grid-area: date;
+}
+main article .section p.description {
+  font-family: "roboto";
+  text-align: justify;
+}
+main .ceinture {
+  margin: 7rem auto;
+  max-width: 1200px;
+  position: relative;
+}
+main .ceinture p {
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: bolder;
+  font-size: 2rem;
+  text-align: center;
+}
+main .ceinture p::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 1px;
+  top: 1rem;
+  left: 0;
+  width: calc(50% - 220px);
+}
+main .ceinture p::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 1px;
+  top: 1rem;
+  right: 0;
+  width: calc(50% - 220px);
+}
+
+footer {
+  margin-top: 8rem;
+  background-color: #1B2430;
+}
+footer .sectionDePied {
+  padding-top: 2rem;
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 2rem;
+  position: relative;
+}
+footer .sectionDePied:first-of-type:before {
+  content: "";
+  height: 1px;
+  background-color: #9F9F9F;
+  left: 0;
+  right: 0;
+  bottom: -2rem;
+  position: absolute;
+}
+footer .sectionDePied .colonneDePied {
+  margin: 0 auto;
+  padding: 0 4rem;
+  position: relative;
+}
+footer .sectionDePied .colonneDePied:nth-of-type(1)::before {
+  content: "";
+  width: 1px;
+  background-color: #9F9F9F;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  right: 0;
+  position: absolute;
+}
+footer .sectionDePied .colonneDePied:nth-of-type(3)::before {
+  content: "";
+  width: 2px;
+  background-color: #9F9F9F;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0;
+  position: absolute;
+}
+footer .sectionDePied .colonneDePied h4 {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+footer .sectionDePied .colonneDePied ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .sectionDePied .colonneDePied ul li {
+  list-style: none;
+  padding: 1rem 2rem;
+}
+footer .sectionDePied .colonneDePied ul li a {
+  color: #9F9F9F;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+}
+footer p {
+  color: white;
+  max-width: 1200px;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  margin: auto;
+}
+footer p:last-of-type {
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  footer .colonneDePied {
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  header nav ul {
+    display: none;
+  }
+  main article {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    margin-top: 61px;
+  }
+  main article:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  main article:nth-of-type(2n) img {
+    margin-left: 0;
+    margin-right: -160px;
+  }
+  main article:nth-of-type(2n+1) {
+    flex-direction: row;
+  }
+  main article:nth-of-type(2n+1) img {
+    margin-left: -160px;
+    margin-right: 0;
+  }
+  main article img {
+    width: 300px;
+    height: 284px;
+    grid-area: dessin;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
