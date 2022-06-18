@@ -72,14 +72,12 @@ main {
         img {
             width: 300px;
             height: 284px;
-            grid-area: dessin;
         }
 
         .section {
             max-width: 750px;
 
             h2 {
-                grid-area: planete;
                 font-weight: 700;
                 font-size: 36px;
                 margin-bottom: 1rem;
@@ -96,7 +94,6 @@ main {
                     width: fit-content;
                     padding: 12px 16px;
                     border-radius: 8px;
-                    grid-area: genre;
                     margin-right: 2rem;
                 }
 
@@ -116,7 +113,6 @@ main {
                     padding: 12px 16px;
                     background-color: #1B2430;
                     border-radius: 8px;
-                    grid-area: date;
                 }
             }
 
@@ -258,6 +254,29 @@ footer {
 }
 
 @media screen and (max-width:1000px) {
+
+    header {
+        nav {
+            padding-left: 2rem;
+            justify-content: flex-start;
+
+            img {
+                width: 35px;
+                height: 24px;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+
     footer {
 
         .sectionDePied {
@@ -265,7 +284,6 @@ footer {
 
             .colonneDePied {
                 padding: 2rem 0;
-
 
                 &:nth-of-type(1)::before {
                     display: none;
@@ -280,13 +298,7 @@ footer {
 }
 
 @media screen and (max-width:500px) {
-    header {
-        nav {
-            ul {
-                display: none;
-            }
-        }
-    }
+
 
     main {
 
@@ -299,9 +311,10 @@ footer {
             &:nth-of-type(2n) {
                 flex-direction: row-reverse;
 
-                img {
-                    margin-left: 0;
-                    margin-right: -200px;
+                img {                    
+                    width: 100px;
+                    object-fit:cover;
+                    object-position: left top;
                 }
             }
 
@@ -310,14 +323,14 @@ footer {
 
                 img {
                     margin-left: -200px;
-                    margin-right: 0;
+                    margin-right: 0;                    
                 }
-            }
 
-            img {
-                width: 300px;
-                height: 284px;
-                grid-area: dessin;
+
+                img {
+                    width: 300px;
+                    height: 284px;
+                }
             }
 
         }
