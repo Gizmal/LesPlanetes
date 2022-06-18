@@ -49,24 +49,22 @@ main article {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  margin-top: 61px;
+  margin-top: 4rem;
+  justify-content: space-between;
 }
 main article:nth-of-type(2n) {
   flex-direction: row-reverse;
 }
-main article:nth-of-type(2n) img {
-  margin-left: 160px;
-}
 main article:nth-of-type(2n+1) {
   flex-direction: row;
-}
-main article:nth-of-type(2n+1) img {
-  margin-right: 160px;
 }
 main article img {
   width: 300px;
   height: 284px;
   grid-area: dessin;
+}
+main article .section {
+  max-width: 750px;
 }
 main article .section h2 {
   grid-area: planete;
@@ -223,11 +221,20 @@ footer p:last-of-type {
 }
 
 @media screen and (max-width: 1000px) {
-  footer .colonneDePied {
-    padding: 0 2rem;
+  footer .sectionDePied {
+    flex-direction: column;
+  }
+  footer .sectionDePied .colonneDePied {
+    padding: 2rem 0;
+  }
+  footer .sectionDePied .colonneDePied:nth-of-type(1)::before {
+    display: none;
+  }
+  footer .sectionDePied .colonneDePied:nth-of-type(3)::before {
+    display: none;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   header nav ul {
     display: none;
   }
@@ -242,13 +249,13 @@ footer p:last-of-type {
   }
   main article:nth-of-type(2n) img {
     margin-left: 0;
-    margin-right: -160px;
+    margin-right: -200px;
   }
   main article:nth-of-type(2n+1) {
     flex-direction: row;
   }
   main article:nth-of-type(2n+1) img {
-    margin-left: -160px;
+    margin-left: -200px;
     margin-right: 0;
   }
   main article img {
