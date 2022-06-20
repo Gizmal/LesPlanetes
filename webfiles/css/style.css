@@ -212,10 +212,8 @@ footer p:last-of-type {
 }
 
 @media screen and (max-width: 1000px) {
-  header nav {
-    padding-left: 2rem;
-  }
   header nav img {
+    padding-left: 3rem;
     width: 35px;
     height: 24px;
   }
@@ -224,7 +222,7 @@ footer p:last-of-type {
   }
   header nav .miniMenu {
     font-size: 2rem;
-    padding-right: 1rem;
+    padding-right: 2rem;
     color: white;
     display: inline;
   }
