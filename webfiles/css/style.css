@@ -2,22 +2,27 @@
   margin: 0;
   padding: 0;
   font-size: 15px;
+  scroll-behavior: smooth;
 }
 
 header {
   background-color: #1B2430;
-  font-style: normal;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 0px;
   font-family: "Montserrat";
 }
 header nav {
-  padding: 25px 0;
+  background-color: #1B2430;
+  position: fixed;
+  text-align: center;
+  padding: 0.67rem 0;
+  font-size: 1.14rem;
   display: flex;
   margin: auto;
-  max-width: 1200px;
+  width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  top: 0;
+  z-index: 2;
 }
 header nav img {
   width: 70px;
@@ -29,23 +34,39 @@ header nav ul {
 }
 header nav ul li {
   list-style: none;
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 header nav ul li a {
-  padding: 5px 3px;
+  display: block;
+  padding: 2.5rem 0rem;
   color: white;
   text-decoration: none;
+  position: relative;
 }
 header nav ul li a:hover {
-  border-bottom: solid 2px #D9D9D9;
+  animation-name: etoile;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
 }
-header nav .miniMenu {
+header nav ul li a:hover::before {
+  content: "";
+  background-color: #D9D9D9;
+  left: -0.5rem;
+  right: -0.5rem;
+  top: 4rem;
+  height: 1px;
+  position: absolute;
+}
+header .miniMenu {
   display: none;
 }
-header .intro {
+
+.intro {
+  margin-top: 9.6rem;
   width: 100%;
   height: 300px;
   object-fit: cover;
+  size: 0;
 }
 
 main article {
@@ -54,6 +75,7 @@ main article {
   display: flex;
   margin-top: 4rem;
   justify-content: space-between;
+  scroll-margin-top: 10rem;
 }
 main article:nth-of-type(2n) {
   flex-direction: row-reverse;
@@ -69,6 +91,7 @@ main article .section {
   max-width: 750px;
 }
 main article .section h2 {
+  font-family: "Roboto";
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 1rem;
@@ -76,9 +99,10 @@ main article .section h2 {
 main article .section .composition {
   display: flex;
   margin-bottom: 1rem;
+  font-family: "Roboto";
 }
 main article .section .composition p.genre {
-  box-shadow: 0 5px 5px gray;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Roboto";
   font-weight: 500;
   width: fit-content;
@@ -91,9 +115,10 @@ main article .section .composition p.tellurique {
 }
 main article .section .composition p.gazeuse {
   background-color: #816797;
+  color: white;
 }
 main article .section .composition p.date {
-  box-shadow: 0 5px 5px gray;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Roboto";
   color: white;
   width: fit-content;
@@ -120,10 +145,10 @@ main .ceinture p {
 main .ceinture p::before, main .ceinture p::after {
   content: "";
   position: absolute;
-  background-color: black;
-  height: 1px;
+  background-color: #1B2430;
+  height: 2px;
   top: 1rem;
-  width: calc(50% - 220px);
+  width: calc(50% - 190px);
 }
 main .ceinture p::before {
   left: 0;
@@ -284,6 +309,32 @@ footer p:last-of-type {
 @media screen and (max-width: 355px) {
   main article img {
     width: 75px;
+  }
+}
+@keyframes etoile {
+  0% {
+    text-shadow: 0 0 2px #ffffff, 0 0 30px #ffffff, 0px 0px 5px #ffffff, 0 0 150px #ffffff;
+    color: #ffffff;
+  }
+  20% {
+    text-shadow: 0 0 2px #969632, 0 0 30px #969632, 0px 0px 5px #969632, 0 0 150px #969632;
+    color: #969632;
+  }
+  40% {
+    text-shadow: 0 0 2px #FFD100, 0 0 30px #FFD100, 0px 0px 5px #FFD100, 0 0 150px #FFD100;
+    color: #FFD100;
+  }
+  60% {
+    text-shadow: 0 0 2px #FFD100, 0 0 30px #FFD100, 0px 0px 5px #FFD100, 0 0 150px #FFD100;
+    color: #FFD100;
+  }
+  80% {
+    text-shadow: 0 0 2px #969632, 0 0 30px #969632, 0px 0px 5px #969632, 0 0 150px #969632;
+    color: #969632;
+  }
+  100% {
+    text-shadow: 0 0 2px #ffffff, 0 0 30px #ffffff, 0px 0px 5px #ffffff, 0 0 150px #ffffff;
+    color: #ffffff;
   }
 }
 
